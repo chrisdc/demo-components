@@ -5,13 +5,14 @@ var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
-    'menu/bundle': './src/menu/index.js'
+    'menu/bundle': './src/menu/index.js',
+    'form/bundle': './src/form/index.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
   },
-  mode: 'production',
+  mode: 'development',
   module: {
     rules: [
       {
