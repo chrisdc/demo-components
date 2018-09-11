@@ -5,13 +5,13 @@ var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
-    'bundle': './src/index.js',
+    'menu/bundle': './src/menu/index.js'
   },
-  mode: 'production',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
   },
+  mode: 'production',
   module: {
     rules: [
       {
@@ -44,7 +44,7 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: './[name]-style.css'
     })
   ]
 }
