@@ -17,7 +17,7 @@
 
         <div class="errors" v-if="$v.email.$error">
           <span class="error" v-if="!$v.email.required">Please enter your email address.</span>
-          <span class="error" v-if="!$v.email.email">Please Enter a valid email address.</span>
+          <span class="error" v-if="!$v.email.email">Please enter a valid email address.</span>
         </div>
       </div>
 
