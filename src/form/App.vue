@@ -1,5 +1,5 @@
 <template>
-  <Form2
+  <ContactForm
     title="Contact Us"
     action="https://usebasin.com/f/cac98f733b75"
   />
