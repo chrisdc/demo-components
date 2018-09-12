@@ -53,24 +53,6 @@
 .form-wrapper[data-v-72c1f666] :last-child {
   margin-bottom: 0;
 }
-
-/*.form-wrapper .overlay {
-  background: #fff;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 100;
-}*/
-.form-wrapper.sent .sent-message[data-v-72c1f666],
-.form-wrapper.failed .failed-message[data-v-72c1f666] {
-  opacity: 1;
-  transition: opacity 0.4s;
-  visibility: visible;
-}
 input[data-v-72c1f666], textarea[data-v-72c1f666] {
   border: 1px solid #ccc;
   border-radius: 4px;

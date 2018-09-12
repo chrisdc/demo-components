@@ -4,7 +4,7 @@
     <form method="post" v-bind:action="action">
       <div class="form-group" v-bind:class="{invalid: $v.name.$error}">
         <label for="name">Name:</label>
-        <input name="name" v-model.trim="$v.name.$model" />
+        <input name="name" v-model.trim.lazy="$v.name.$model" />
 
         <div class="errors" v-if="$v.name.$error">
           <span class="error" v-if="!$v.name.required">Please enter your name.</span>
@@ -13,7 +13,7 @@
 
       <div class="form-group" v-bind:class="{invalid: $v.email.$error}">
         <label for="email">Email:</label>
-        <input name="email" v-model="email" />
+        <input name="email" v-model.trim.lazy="$v.email.$model"/>
 
         <div class="errors" v-if="$v.email.$error">
           <span class="error" v-if="!$v.email.required">Please enter your email address.</span>
@@ -28,7 +28,7 @@
 
       <div class="form-group" v-bind:class="{invalid: $v.enquiry.$error}">
         <label for="enquiry">Enquiry:</label>
-        <textarea name="enquiry" v-model="enquiry" rows="6"/>
+        <textarea name="enquiry" v-model.trim.lazy="$v.enquiry.$model" rows="6"/>
 
         <div class="errors" v-if="$v.enquiry.$error">
           <span class="error" v-if="!$v.enquiry.required">Please enter a message.</span>
@@ -153,25 +153,6 @@
 
   .form-wrapper :last-child {
     margin-bottom: 0;
-  }
-
-  /*.form-wrapper .overlay {
-    background: #fff;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 100;
-  }*/
-
-  .form-wrapper.sent .sent-message,
-  .form-wrapper.failed .failed-message {
-    opacity: 1;
-    transition: opacity 0.4s;
-    visibility: visible;
   }
 
   input, textarea {
